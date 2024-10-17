@@ -3,10 +3,8 @@ import fs from 'fs';
 import admin from 'firebase-admin';
 import { db, connectToDb } from './db.js';
 
-// retrieves data from file and parsing it as JSON object
-const credentials = JSON.parse(
-    fs.readFileSync('./credentials.json')
-);
+
+const credentials = JSON.parse(process.env.FIREBASE_CREDENTIALS)
 
 // Telling firebase-admin package what credentials to use to connect to our project
 admin.initializeApp({
