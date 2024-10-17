@@ -1,5 +1,4 @@
 import express from 'express';
-import fs from 'fs';
 import admin from 'firebase-admin';
 import { db, connectToDb } from './db.js';
 
